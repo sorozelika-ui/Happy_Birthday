@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingText("Happy BIRTHDAY ZHOULEYKHA!", "FROM EMMA")
+                    GreetingImage("Happy BIRTHDAY ZHOULEYKHA!", "FROM EMMA")
 
                 }
             }
@@ -76,7 +76,8 @@ fun GreetingImage(message: String, from: String) {
         Image(
             painter = image,
             contentDescription = null,
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            alpha = 0.5F
         )
         GreetingText(
             message = message, from = from, modifier = Modifier
