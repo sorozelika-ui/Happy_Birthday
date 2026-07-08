@@ -45,9 +45,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 // parametre modifier de type Modifier et la valeur par default = Modifier
 
-fun GreetingText(message : String , from : String , modifier: Modifier = Modifier){
+fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     //AJOUT DU COMPOSANT TEXT
-    Column(verticalArrangement = Arrangement.Center, modifier = modifier.padding(8.dp)) {
+    Column(verticalArrangement = Arrangement.Center, modifier = modifier) {
         Text(
             text = message,
             color = Color.Magenta,
@@ -64,6 +64,10 @@ fun GreetingText(message : String , from : String , modifier: Modifier = Modifie
                 .align(alignment = Alignment.End)
         )
     }
+}
+
+fun GreetingImage(message: String, from: String) {
+
 }
 
 @Preview(showBackground = false)
